@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: #2196f3;
+  height: 100vh;
+}
+.parent {
+  background: white;
+  height: 350px;
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 12px grey;
+}
+.result {
+  height: 350px;
+  width: 500px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  background: skyblue;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.parent .header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 6px 0px #80808061;
+  align-items: center;
+  height: 50px;
+  padding: 0px 20px;
+  position: relative;
+}
+.parent .progress {
+  content: "";
+  position: absolute;
+  background: #2196f3;
+  left: 0px;
+  bottom: 0px;
+  height: 2px;
+  width: 0%;
+  transform-origin: left;
+}
+.parent .progress.start {
+  animation: prog 15s linear;
+}
+
+@keyframes prog {
+  to {
+    width: 100%;
+  }
+}
+
+.parent .header .time {
+  padding: 5px;
+  background: #2196f347;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.parent .header .time span {
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 5px;
+}
+
+.qautions {
+  padding: 10px 20px;
+  height: 260px;
+  border-bottom: 1px #bdbdbd solid;
+}
+.qautions .answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 185px;
+  margin-top: 10px;
+}
+.qautions .answer {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #03a9f46e;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #2196f317;
+  align-items: center;
+  cursor: pointer;
+}
+.qautions .answer span {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.qautions .answer.right {
+  background: #4caf5066;
+  border-color: transparent;
+  color: #005d04;
+}
+
+.qautions .answer.wrong {
+  background: #ff000036;
+  border-color: transparent;
+  color: #d60000;
+}
+.qautions .answer.right span {
+  display: flex;
+}
+
+.qautions .answer.wrong span {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+  padding: 0px 20px;
+  font-size: 14px;
+}
+.footer .next {
+  background: blue;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
